@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>Insertion Form</h1>
+	<form method="post">
+		{{form.as_p}}
+		{% csrf_token %}
+		<button>submit</button>
+	</form>
+</center>
+</body>
+</html>

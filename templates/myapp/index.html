@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		a{
+			text-decoration: none;
+			font-family: revert-layer;
+			color: #DD0303;
+		}
+		h1{
+			background-color: black;
+			color: darkred;
+		}
+		table{
+			border: 2px solid black;
+			background-image: linear-gradient(to right,#EBEBEB,#0BA6DF);
+		}
+		body{
+			background-image: linear-gradient(to right,#F5EFE6,#E8DFCA,#6D94C5,#CBDCEB);
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>Task-Tracker with smart insights</h1>
+		<table border="2px">
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>email</th>
+				<th>place</th>
+				<th>duedate</th>
+				<th>status</th>
+			</tr>
+			
+				{% for i in stud %}
+			<tr>
+				<td>{{i.title}}</td>
+				<td>{{i.description}}</td>
+				<td>{{i.email}}</td>
+				<td>{{i.place}}</td>
+				<td>{{i.duedate}}</td>
+				<td>{{i.status}}</td>
+				<td><a href="/update/{{i.id}}">update</a></td>
+				<td><a href="/delete/{{i.id}}">delete</a></td>
+			</tr>
+			{% endfor %}
+			
+		</table><br>
+		<a href="/insert/{{i.id}}">Do you want to insert new record</a>
+	</center>
+
+</body>
+</html>
